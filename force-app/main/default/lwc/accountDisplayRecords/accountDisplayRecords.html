@@ -1,0 +1,47 @@
+<template>
+    <!-- <lightning-card title="Accounts">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="slds-text-align_left" scope="col">Name</th>
+                    <th class="slds-text-align_left" scope="col">Phone</th>
+                    <th class="slds-text-align_left" scope="col">Billing City</th>
+                    <th class="slds-text-align_left" scope="col">Billing Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={accounts} for:item="account">
+                    <tr key={account.Id}>
+                        <td>{account.Name}</td>
+                        <td>{account.Phone}</td>
+                        <td>{account.BillingCity}</td>
+                        <td>{account.BillingCountry}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        <lightning-card title="Create Account">
+            <lightning-input label="Name" value={accountName} onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Phone" value={accountPhone} onchange={handlePhoneChange}></lightning-input>
+            <lightning-input label="Billing City" value={accountBillingCity} onchange={handleBillingCityChange}></lightning-input>
+            <lightning-input label="Billing Country" value={accountBillingCountry} onchange={handleBillingCountryChange}></lightning-input>
+            <lightning-button label="Create" onclick={handleCreate}></lightning-button>
+        </lightning-card>
+    </lightning-card> -->
+
+    <!-- <lightning-card title="Account Record Create Form" icon-name="standard:account">
+        <div class="slds-var-p-around_x-small">
+            <lightning-input value={recAccount.Name} label="Account Name" onchange={handelNamechange}></lightning-input>
+            <lightning-input value={recAccount.Phone} label="Phone" onchange={handelPhonechange}></lightning-input>
+            <lightning-input value={recAccount.Rating} label="Rating" onchange={handelRatingchange}></lightning-input>
+            <lightning-input value={recAccount.Industry} label="Industry" onchange={handelinduschange}></lightning-input>
+            <br/>
+            <lightning-button label="Save Account Rec" onclick={createAccRec} variant="brand"></lightning-button>
+        </div>
+    </lightning-card> -->
+   
+        <lightning-record-form record-id={recordId} object-api-name={objectApiName}
+            fields={fields} columns="2" mode="edit" onsubmit={handleSubmit}>
+        </lightning-record-form>
+   
+</template>

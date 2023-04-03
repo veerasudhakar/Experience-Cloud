@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Accounts Tree Grid">
+        <lightning-tree-grid
+            columns={columns}
+            data={data}
+            key-field="Id"
+            onrowselection={handleRowSelection}
+            onrowaction={handleRowAction}>
+        </lightning-tree-grid>
+    </lightning-card>
+</template>

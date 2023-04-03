@@ -1,0 +1,35 @@
+<template>
+    <!--lightning-card title="Account Details">
+        <lightning-dual-listbox name="languages"
+                            label="Select Languages"
+                            source-label="Available"
+                            selected-label="Selected"
+                            field-level-help="Select your preferred languages"
+                            options={options}
+                            onchange={handleChange}></lightning-dual-listbox>
+    <div class="slds-box" >
+        <p>Selected values are: {selected}</p>
+    </div>
+        <div>
+        <lightning-input label="Name" name="Name" type="text" required onkeyup={handleKeyup}></lightning-input>
+        <lightning-combobox
+        name="industry"
+        label="Industry"
+        value={selectedIndustry}
+        placeholder="-Select Industry-"
+        options={industryOptions}
+        onchange={handleIndustryChange}>
+    </lightning-combobox>
+</div>
+    </lightning-card-->
+    <template if:true={isSpinner}>
+        <div class="spinner">
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+    </template>
+    <lightning-card title="connectedCallback Example">
+        <lightning-datatable data={accountList} columns={cols} key-field="Id">
+        </lightning-datatable>
+    </lightning-card>
+
+</template>

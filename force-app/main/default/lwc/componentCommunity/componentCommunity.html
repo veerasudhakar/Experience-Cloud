@@ -1,0 +1,59 @@
+<template>
+    
+   
+    <lightning-card>
+        <lightning-layout>
+         <lightning-layout-item size="3">
+        <lightning-button label="Register" onclick={SalesforceHandler} variant="brand"></lightning-button>
+         </lightning-layout-item>
+   
+        <!--<lightning-layout-item size="3">
+        <lightning-button label="Python" onclick={PythonHandler} variant="brand"></lightning-button>
+         </lightning-layout-item>
+         <lightning-layout-item size="3">
+        <lightning-button label="Java" onclick={JavaHandler} variant="brand"></lightning-button>
+         </lightning-layout-item>-->
+   
+   
+        </lightning-layout>
+        <template if:true={other}>
+           <lightning-datatable
+               key-field="id"
+               data={other}
+               hide-checkbox-column
+               columns={col1}>
+           </lightning-datatable>
+           </template>
+
+
+
+
+         <template if:true={customer}>
+           <lightning-datatable
+               key-field="id"
+               data={customer}
+               hide-checkbox-column
+               columns={col1}>
+           </lightning-datatable>
+     </template>
+         <template if:true={prospect}>
+           <lightning-datatable
+               key-field="id"
+               data={prospect}
+               hide-checkbox-column
+               columns={col1}>
+           </lightning-datatable>
+     </template>
+   
+       </lightning-card>
+   
+    
+        
+           <!--<lightning-button variant="brand" label="Retrieve Records" 
+           title="Retrieve Records" onclick={handleClick} 
+                class="slds-m-left_x-small">
+        </lightning-button>-->
+        
+        
+    
+</template>

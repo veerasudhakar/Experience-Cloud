@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-m-around_medium">
+        <template if:true={accounts.data}>
+            <lightning-tree-grid
+                key-field="Id"
+                data={treeGridData}
+                columns={accountColumns}
+                onrowselection={handleRowSelection}
+                hide-checkbox-column>
+            </lightning-tree-grid>
+        </template>
+        <template if:true={accounts.error}>
+            <c-error-panel errors={accounts.error}></c-error-panel>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Program Details">
+        <div>
+        <lightning-input label="Name" name="Name" type="text" required onkeyup={handleKeyup}></lightning-input>
+        <lightning-combobox
+        name="ProgramType"
+        label="ProgramType"
+        value={selectedProgramType}
+        placeholder="-Select ProgramType-"
+        options={ProgramTypeOptions}
+        onchange={handleIndustryChange}>
+    </lightning-combobox>
+</div>
+    </lightning-card>
+</template>
